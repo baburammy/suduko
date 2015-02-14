@@ -56,21 +56,3 @@ Trade-off and Future enhancements:-
 5. We can provide multi player game options also.
   
  
-
-  
-	
-  
- 
- 
- 
-  
-
-
-<div class="sep">
-				<div>S</div>
-				<div>U</div>
-				<div>D</div>
-				<div>U</div>
-				<div>K</div>
-				<div>O</div>
-			</div>
