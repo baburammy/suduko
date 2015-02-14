@@ -1,0 +1,71 @@
+@boxBorderColor:#4a4d52;
+@boxShadowColor:gold;
+@boxShadowRowErrorColor:red;
+@boxShadowColoumErrorColor:red;
+@boxShadowBoxErrorColor:red;
+@readOnlyInputColor:#d3d3d4;
+@inputErrorTextColor:red;
+.boxShadow{
+	box-shadow: inset 0 0 1em;
+}
+.borderBox{
+	-webkit-box-sizing : border-box;
+	-moz-box-sizing : border-box;
+    box-sizing : border-box;
+}
+.inbl{
+	display:inline-block;
+}
+input[type=text]
+ {
+   .borderBox;
+	padding:0;	
+}
+.wholePage{
+	width:100%;		
+}
+.wholePage div{
+	.inbl;	
+}
+.wholePage .sep{
+	width:10%;			
+}
+.wholePage .boardWrap{
+	width:80%;			
+}
+.wholePage .boardWrap .board > div{	
+	width:100%;
+	display:block;
+}
+.wholePage .boardWrap .board > div > div{	
+	width:11.11%;
+	height:11.11%;	
+	position:relative;
+	padding:3px;	
+	.borderBox;
+	.boxShadow;
+	color: @boxShadowColor;
+}
+.wholePage .boardWrap .board  input{	
+	font-size: 20px;
+    font-weight: bold;
+    height: 100%;
+    text-align: center;
+    width: 100%;
+	padding:0;
+}
+.wholePage .boardWrap .board  input[disabled]{
+	background-color:@readOnlyInputColor;
+}
+.wholePage .boardWrap .board  input.inpErr{
+	color:@inputErrorTextColor;
+}
+.wholePage .boardWrap .board > div.err > div{
+	color:@boxShadowRowErrorColor;
+}
+.boardWrap .board  > div > div.colErr{
+	color:@boxShadowColoumErrorColor;
+}
+.boardWrap .board  > div > div.boxErr{
+	color:@boxShadowBoxErrorColor;
+}

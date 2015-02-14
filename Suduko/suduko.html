@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Suduku Game</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+	<meta content="Suduku puzzle" name="description">
+	<meta content="suduku,puzzle,number game" name="keywords">
+	<link rel="stylesheet/less" type="text/css" href="css/suduko.less">
+	<script src="js/less.js" type="text/javascript"></script>	
+	<script src="js/handlebar.js" type="text/javascript"></script>	
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script id="board-template" type="x-handlebars-template">​<div class="board">{{#each this}}<div>{{#each row}}<div><input type="tel" pattern="[0-9]*" maxlength="1" data-row="{{@../index}}" {{#isGTZ .}} disabled{{/isGTZ}} data-col="{{@index}}" value="{{#showValue .}}{{/showValue}}" /></div>{{/each}}</div>{{/each}}</div></script>	
+</head>
+<body>	
+		<div class="wholePage">
+			<div class="sep">			  			
+			</div>
+			<div class="mainCnt">
+				<div class="ttl">S U D U K O</div>
+				<div><a href="http://en.wikipedia.org/wiki/Sudoku" target="_blank">Game Rules</a></div>
+				<div class="headWrap">
+					<div data-level="1" class="selected">Easy</div>
+					<div data-level="2">Medium</div>
+					<div data-level="3">Difficult</div>
+				</div>
+				<div class="result">
+					<div class="sucMsg">Congratulations!! You Won.</div>						
+					<div class="errMsg">Kindly, correct the errors.</div>
+				</div>
+				<div id="boardWrap" class="boardWrap"></div>
+				<div id="validate" class="validate">Validate Board</div>
+			</div>			
+			<div class="sep"></div>
+		</div>
+		<div class="foot">
+		</div>
+		<script src="js/suduko.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var gamLauncher = new SudukoGameLauncher_Ramesh();
+				gamLauncher.launchGame();
+			});	
+		</script>		
+</body>
+ 
+</html>
